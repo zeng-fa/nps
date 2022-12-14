@@ -150,10 +150,10 @@ reset:
 	if !isReset {
 		defer host.Client.AddConn()
 	}
-	if err = s.auth(r, c, host.Client.Cnf.U, host.Client.Cnf.P); err != nil {
-		logs.Warn("auth error", err, r.RemoteAddr)
-		return
-	}
+	//if err = s.auth(r, c, host.Client.Cnf.U, host.Client.Cnf.P); err != nil {
+	//	logs.Warn("auth error", err, r.RemoteAddr)
+	//	return
+	//}
 	if targetAddr, err = host.Target.GetRandomTarget(); err != nil {
 		logs.Warn(err.Error())
 		return
